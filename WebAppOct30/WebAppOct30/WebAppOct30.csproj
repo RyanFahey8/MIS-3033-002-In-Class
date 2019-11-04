@@ -156,8 +156,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Student.cs">
+      <DependentUpon>TestModel2.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TestModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -173,6 +177,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TestModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TestModel2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestModel2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TestModel2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestModel2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TestModel2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestModel2.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -195,6 +214,16 @@
       <DependentUpon>TestModel.edmx</DependentUpon>
       <LastGenOutput>TestModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\TestModel2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TestModel2.edmx</DependentUpon>
+      <LastGenOutput>TestModel2.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\TestModel2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TestModel2.edmx</DependentUpon>
+      <LastGenOutput>TestModel2.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -206,6 +235,13 @@
     </EntityDeploy>
     <Content Include="Models\TestModel.edmx.diagram">
       <DependentUpon>TestModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\TestModel2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TestModel2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\TestModel2.edmx.diagram">
+      <DependentUpon>TestModel2.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -232,6 +268,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Students\Create.cshtml" />
+    <Content Include="Views\Students\Delete.cshtml" />
+    <Content Include="Views\Students\Details.cshtml" />
+    <Content Include="Views\Students\Edit.cshtml" />
+    <Content Include="Views\Students\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
